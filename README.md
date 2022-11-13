@@ -1,5 +1,5 @@
 # ReactComponentsLibrary
-My personnal react reusables components, with usage and style samples.
+My collection of react,js reusables components, with usage and style samples.
 
 ##typewriter
 Visual effect to looks somebody's typing text.  
