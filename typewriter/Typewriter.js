@@ -1,6 +1,7 @@
 //////////////////////////////////////////
 /////////// USAGE EXAMPPLE : ////////////
 ////////////////////////////////////////
+
 // import TypeWriter from "./Typewriter";
 
 // @keyframes blinker {
@@ -10,21 +11,23 @@
 // }
 
 // .typewriter {
-//     opacity: 0;
-//     border-right: 0.06em solid rgba(185, 185, 185) !important;
-//     animation: blinker 1s linear infinite;
-//     padding-right: 6px;
-//     font-size: 0.65em;
-//     //animation-iteration-count: 8;
-//     padding-top: 5px;
-//   }
+  // opacity: 0;
+  // animation: blinker 1s linear;
+  // border-right: 0.06rem solid rgba(185, 185, 185) !important;
+  // color: $background-color_5;
+  // height: 100%;
+  // animation-iteration-count: 8;  <====== NEED To Adjuste to text size 
+// I was trying to do : 
+// <TypeWriter style={{ animationIterationCount: typeWriterTxt.length }} data={typeWriterTxt} />
+// But can't fin JSX equivalent for inline style animation-iteration-count
+
+// IN A COMPONENT :
+// const typeWriterTxt = ["Hi ! I'm Nicolas, developer."];
 
 // return (
-//   <span className="txt-rotate">
-//     <TypeWriter data={typeWriter} />
-//     <span className="typewriter"></span>
-//   </span>
+//     <TypeWriter style={{ animationIterationCount: typeWriterTxt.length }} data={typeWriterTxt} />
 // };
+
 //////////////////////////////////////////
 /////////////////////////////////////////
 ////////////////////////////////////////
@@ -68,7 +71,7 @@ class TypeWriter extends React.PureComponent {
   }
 
   render() {
-    return <span>{this.state.text}</span>;
+    return <span>{this.state.text}<span className="typewriter"></span></span>;
   }
 }
 
